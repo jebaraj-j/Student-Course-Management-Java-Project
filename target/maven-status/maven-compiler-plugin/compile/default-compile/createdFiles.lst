@@ -1,0 +1,6 @@
+org\example\config\AppInitializer.class
+org\example\entity\Course.class
+org\example\config\CourseConfig.class
+org\example\controller\CourseController.class
+org\example\service\CourseService.class
+org\example\dao\CourseDao.class
