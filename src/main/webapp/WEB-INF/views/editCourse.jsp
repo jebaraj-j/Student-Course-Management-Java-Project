@@ -1,20 +1,35 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<h2>Edit Course</h2>
+<html>
+<head>
+  <title>Edit Course</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+</head>
 
-<form action="${pageContext.request.contextPath}/update" method="post">
+<body>
 
-  <input type="hidden" name="id" value="${course.id}"/>
+<div class="container">
 
-  Name:
-  <input type="text" name="name" value="${course.name}" required><br><br>
+  <h1>Edit Course</h1>
 
-  Instructor:
-  <input type="text" name="instructor" value="${course.instructor}" required><br><br>
+  <form action="${pageContext.request.contextPath}/update" method="post">
 
-  <button type="submit">Update</button>
+    <input type="hidden" name="id" value="${course.id}"/>
 
-</form>
+    <label>Course Name</label>
+    <input type="text" name="name" value="${course.name}" required>
 
-<a href="${pageContext.request.contextPath}/">Back</a>
+    <label>Instructor</label>
+    <input type="text" name="instructor" value="${course.instructor}" required>
+
+    <button type="submit" class="btn">Update Course</button>
+
+  </form>
+
+  <a class="back" href="${pageContext.request.contextPath}/">← Back to Course List</a>
+
+</div>
+
+</body>
+</html>
